@@ -4,6 +4,9 @@ import Nav from './components/Nav.jsx'
 import Hero from './components/Hero.jsx'
 import AboutUs from './components/AboutUs.jsx'
 import './index.css'
+import Specialties from './components/Specialties.jsx'
+import Contact from './components/Contact.jsx'
+import Testimonials from './components/Testimonials.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -11,6 +14,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Nav />
       <Hero />
       <AboutUs />
+      <Specialties />
+      <Contact />
+      <Testimonials />
     </>
   </React.StrictMode>
 )
