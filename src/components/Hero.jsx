@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <section className='flex'>
       <div className='flex relative h-[800px] w-full'>
-        <img className='flex w-full aspect-video object-cover' src={smile} alt='person smiling' />
+        <img className='flex object-right w-full aspect-video object-cover' src={smile} alt='person smiling' />
         <div className='flex gap-12 flex-col h-full md:w-fit w-full items-center absolute md:translate-x-48 md:items-start justify-center'>
           <h1 className='font-inter text-sky-900 font-bold text-4xl lg:text-8xl'>¡Atrévete a <p className='text-white'>volver a sonreír!</p></h1>
           <section className='flex text-white gap-6 font-inter'>

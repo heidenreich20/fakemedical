@@ -7,6 +7,7 @@ import './index.css'
 import Specialties from './components/Specialties.jsx'
 import Contact from './components/Contact.jsx'
 import Testimonials from './components/Testimonials.jsx'
+import ContactForm from './components/ContactForm.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Specialties />
       <Contact />
       <Testimonials />
+      <ContactForm />
     </>
   </React.StrictMode>
 )
