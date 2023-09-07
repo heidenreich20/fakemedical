@@ -7,7 +7,7 @@ import map from '../assets/map.png'
 const ContactForm = () => {
   return (
     <section className='flex mb-10 lg:flex-row flex-col items-center justify-center gap-16 lg:gap-24 text-neutral-800'>
-      <div className='flex p-5 lg:p-0 flex-col gap-12'>
+      <div className='flex lg:p-0 flex-col gap-12'>
         <div>
           <h3 className='text-4xl font-inter'>Contáctanos</h3>
           <p className='italic font-inter'>Contáctanos para pedir tu cita</p>
