@@ -41,3 +41,7 @@ html{
   align-items: center;
   z-index: 1000; /* Adjust as needed */
 }
+
+textarea {
+    resize: none;
+}

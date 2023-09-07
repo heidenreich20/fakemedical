@@ -18,7 +18,7 @@ const Nav = () => {
       <svg className='md:hidden block stroke-sky-700' width='64px' height='64px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <path d='M4 6H20M4 12H20M4 18H20' stroke='inherit' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
       </svg>
-      <button className='text-neutral-100 md:block hidden box-content font-semibold bg-sky-700 p-2 xl:p-3 px-6 xl:px-12 rounded-md'>Pide tu cita</button>
+      <a href='#contactForm' className='text-neutral-100 md:block hidden box-content font-semibold bg-sky-700 p-2 xl:p-3 px-6 xl:px-12 rounded-md'>Pide tu cita</a>
     </nav>
   )
 }
