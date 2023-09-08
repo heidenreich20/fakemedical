@@ -36,7 +36,7 @@ export default function ModalContent ({ onClose }) {
 
   return (
     <div className='modal'>
-      <section className='bg-sky-700 p-5 w-fit rounded-lg'>
+      <section className='bg-sky-700 p-5 w-full md:w-fit rounded-lg'>
         <div className='flex w-full justify-end'>
           <button
             className='font-inter justify-end text-neutral-100'
@@ -50,13 +50,13 @@ export default function ModalContent ({ onClose }) {
           action='submit'
           onSubmit={handleSubmit}
         >
-          <div className='flex justify-between gap-10'>
+          <div className='flex md:flex-row flex-col justify-between md:gap-10'>
             <section className='flex flex-col gap-3'>
               <label htmlFor='name'>Nombre</label>
               <input
                 onChange={handleInputChange}
                 required
-                className='rounded-sm p-2 text-neutral-700'
+                className='rounded-sm p-1 md:p-2 text-neutral-700'
                 type='text'
                 id='name'
                 name='name'
@@ -66,7 +66,7 @@ export default function ModalContent ({ onClose }) {
               <input
                 onChange={handleInputChange}
                 required
-                className='rounded-sm p-2 text-neutral-700'
+                className='rounded-sm p-1 md:p-2 text-neutral-700'
                 type='text'
                 id='surname'
                 name='surname'
@@ -76,7 +76,7 @@ export default function ModalContent ({ onClose }) {
               <input
                 onChange={handleInputChange}
                 required
-                className='rounded-sm p-2 text-neutral-700'
+                className='rounded-sm p-1 md:p-2 text-neutral-700'
                 type='email'
                 id='email'
                 name='email'
@@ -88,7 +88,7 @@ export default function ModalContent ({ onClose }) {
               <input
                 onChange={handleInputChange}
                 required
-                className='rounded-sm p-2 text-neutral-700'
+                className='rounded-sm p-1 md:p-2 text-neutral-700'
                 type='tel'
                 id='phone'
                 name='phone'
