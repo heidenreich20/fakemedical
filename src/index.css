@@ -45,3 +45,10 @@ html{
 textarea {
     resize: none;
 }
+
+/* Add this CSS to your stylesheets */
+@media (max-width: 768px) { /* You can adjust the breakpoint to your needs */
+    .input-container label {
+      display: none; /* Hide the label */
+    }
+  }

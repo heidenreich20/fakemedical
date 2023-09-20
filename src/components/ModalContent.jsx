@@ -36,7 +36,7 @@ export default function ModalContent ({ onClose }) {
 
   return (
     <div className='modal'>
-      <section className='bg-sky-700 p-5 w-full md:w-fit rounded-lg'>
+      <section className='bg-sky-700 p-5 md:w-fit rounded-lg'>
         <div className='flex w-full justify-end'>
           <button
             className='font-inter justify-end text-neutral-100'
@@ -46,14 +46,15 @@ export default function ModalContent ({ onClose }) {
           </button>
         </div>
         <form
-          className='flex flex-col font-inter text-neutral-100 gap-2 mt-5'
+          className='flex md:text-base text-xs flex-col font-inter text-neutral-100 gap-2 mt-5'
           action='submit'
           onSubmit={handleSubmit}
         >
-          <div className='flex md:flex-row flex-col justify-between md:gap-10'>
-            <section className='flex flex-col gap-3'>
+          <div className='flex gap-4 md:gap-3 md:flex-row flex-col justify-between md:gap-10'>
+            <section className='input-container flex flex-col gap-4 md:gap-3'>
               <label htmlFor='name'>Nombre</label>
               <input
+                placeholder='Nombre...'
                 onChange={handleInputChange}
                 required
                 className='rounded-sm p-1 md:p-2 text-neutral-700'
@@ -64,6 +65,7 @@ export default function ModalContent ({ onClose }) {
               />
               <label htmlFor='surname'>Apellido</label>
               <input
+                placeholder='Apellido...'
                 onChange={handleInputChange}
                 required
                 className='rounded-sm p-1 md:p-2 text-neutral-700'
@@ -72,8 +74,9 @@ export default function ModalContent ({ onClose }) {
                 name='surname'
                 value={formData.surname}
               />
-              <label htmlFor='email'>Email</label>
+              <label htmlFor='email'>Mail</label>
               <input
+                placeholder='Mail...'
                 onChange={handleInputChange}
                 required
                 className='rounded-sm p-1 md:p-2 text-neutral-700'
@@ -83,9 +86,10 @@ export default function ModalContent ({ onClose }) {
                 value={formData.email}
               />
             </section>
-            <section className='flex flex-col gap-3'>
+            <section className='input-container flex flex-col gap-4 md:gap-3'>
               <label htmlFor='phone'>Teléfono</label>
               <input
+                placeholder='Teléfono...'
                 onChange={handleInputChange}
                 required
                 className='rounded-sm p-1 md:p-2 text-neutral-700'
@@ -96,6 +100,7 @@ export default function ModalContent ({ onClose }) {
               />
               <label htmlFor='message'>Mensaje</label>
               <textarea
+                placeholder='Mensaje...'
                 autoComplete='off'
                 onChange={handleInputChange}
                 className='rounded-sm h-full text-neutral-700 p-1'
