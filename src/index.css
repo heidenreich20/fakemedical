@@ -50,5 +50,48 @@ textarea {
 @media (max-width: 768px) { /* You can adjust the breakpoint to your needs */
     .input-container label {
       display: none; /* Hide the label */
-    }
   }
+}
+
+/* Define keyframes for opening the menu */
+@keyframes open-menu {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 95%;
+    }
+}
+
+/* Define keyframes for closing the menu */
+@keyframes close-menu {
+    0% {
+        opacity: 95%;
+    }
+    100% {
+        opacity: 0%;
+        display: none;
+    }
+}
+
+/* Apply the animation to the .burger-menu element */
+.burger-menu {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: #fafafa;
+    width: 100%;
+    overflow: hidden;
+    animation-duration: 0.3s; /* Animation duration */
+    animation-fill-mode: both; /* Keeps the end state */
+}
+
+/* Add a class to trigger the opening animation */
+.burger-menu-open {
+    animation-name: open-menu;
+}
+
+/* Add a class to trigger the closing animation */
+.burger-menu-close {
+    animation-name: close-menu;
+}

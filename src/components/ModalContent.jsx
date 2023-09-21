@@ -50,7 +50,7 @@ export default function ModalContent ({ onClose }) {
           action='submit'
           onSubmit={handleSubmit}
         >
-          <div className='flex gap-4 md:gap-3 md:flex-row flex-col justify-between md:gap-10'>
+          <div className='flex gap-4 md:gap-3 md:flex-row flex-col justify-between lg:gap-10'>
             <section className='input-container flex flex-col gap-4 md:gap-3'>
               <label htmlFor='name'>Nombre</label>
               <input
@@ -129,7 +129,7 @@ export default function ModalContent ({ onClose }) {
           <div className='flex justify-end'>
             <button
               type='submit'
-              className='mt-5 font-inter bg-sky-500 text-white px-3 py-2 rounded-sm'
+              className='mt-5 font-inter hover:bg-sky-600 transition-colors duration-100 ease-linear bg-sky-500 text-white px-3 py-2 rounded-sm'
             >
               Enviar
             </button>
