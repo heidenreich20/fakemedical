@@ -79,7 +79,6 @@ textarea {
     position: absolute;
     display: flex;
     justify-content: center;
-    background-color: #fafafa;
     width: 100%;
     overflow: hidden;
     animation-duration: 0.3s; /* Animation duration */
