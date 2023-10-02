@@ -11,7 +11,7 @@ const Nav = () => {
   return (
     <nav className='sticky top-0 z-20 bg-neutral-50/[0.95] shadow-md shadow-neutral-500/[0.3]'>
       <div className='flex lg:justify-center justify-between lg:px-0 px-5 items-center gap-8 lg:gap-16 xl:gap-32 h-20'>
-        <a title='home' href='/' aria-label='home' className='flex cursor-pointer gap-2 justify-center items-center'>
+        <a title='home' href='/' aria-label='home' className='flex cursor-pointer gap-2 justify-center items-center focus-visible:outline focus-visible:outline-2 rounded-lg focus-visible:outline-sky-700 outline-offset-4'>
           <img className='md:w-fit w-12' src={Logo} alt='tooth logo' />
           <div className='md:block hidden'>
             <p className='font-inter md:text-base text-sm text-neutral-500 italic'>FakeDental</p>

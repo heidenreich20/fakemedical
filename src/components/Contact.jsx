@@ -1,9 +1,6 @@
-import { useState } from 'react'
 import Modal from './Modal'
 
 const Contact = () => {
-  const [show, setShow] = useState(false)
-
   return (
     <div id='contactForm' className='flex flex-col mb-20 gap-5 justify-center py-20 items-center bg-sky-700 w-full h-full'>
       <h3 className='text-white font-bold font-inter text-5xl'>Pida su cita</h3>
