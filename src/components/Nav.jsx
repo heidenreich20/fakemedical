@@ -23,8 +23,8 @@ const Nav = () => {
           <li className='transition-all duration-150 ease-linear hover:underline hover:text-sky-600'><a className='focus-visible:outline focus-visible:outline-2 rounded-lg focus-visible:outline-sky-700 outline-offset-4' href='#aboutUs'>Quienes somos</a></li>
           <li className='transition-all duration-150 ease-linear hover:underline hover:text-sky-600'><a className='focus-visible:outline focus-visible:outline-2 rounded-lg focus-visible:outline-sky-700 outline-offset-4' href='#specialties'>Especialidades</a></li>
         </ul>
-        <button onClick={toggleMenu}>
-          <svg className='md:hidden block stroke-sky-700' width='64px' height='64px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+        <button className='md:hidden block stroke-sky-700' onClick={toggleMenu}>
+          <svg width='64px' height='64px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
             <path d='M4 6H20M4 12H20M4 18H20' stroke='inherit' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' />
           </svg>
         </button>
