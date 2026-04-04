@@ -1,6 +1,7 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Verity Dental · Clínica Dental Buenos Aires",
+  "short_name": "VerityDental",
+  "description": "Clínica dental en Buenos Aires. Implantes, veneers, ortodoncia, blanqueamiento y más.",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +16,10 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  "theme_color": "#2C2C2A",
+  "background_color": "#F8F5F0",
+  "display": "standalone",
+  "start_url": "/",
+  "lang": "es-AR",
+  "orientation": "portrait"
 }
