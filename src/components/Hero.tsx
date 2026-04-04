@@ -3,26 +3,19 @@ import smile from '../assets/smiling.webp'
 const Hero = () => {
   return (
     <section className="relative overflow-hidden" style={{ minHeight: 'calc(100vh - 5rem)' }}>
-      {/* Background image */}
       <img
         src={smile}
         alt="Paciente sonriendo"
         className="absolute inset-0 w-full h-full object-cover object-center"
         style={{ objectPosition: '65% center' }}
       />
-
-      {/* Gradient overlay */}
       <div className="hero-overlay absolute inset-0" />
-
-      {/* Content */}
       <div className="relative z-10 flex items-center h-full min-h-[calc(100vh-5rem)] px-6 lg:px-20 xl:px-32 max-w-7xl mx-auto">
         <div className="max-w-xl py-20">
           {/* Label */}
           <div className="section-pill mb-8">
             <span>Clínica Dental · Buenos Aires</span>
           </div>
-
-          {/* Headline */}
           <h1
             className="font-display mb-6"
             style={{
@@ -38,8 +31,6 @@ const Hero = () => {
               volver a sonreír
             </em>
           </h1>
-
-          {/* Subtext */}
           <p
             className="mb-10 max-w-sm"
             style={{
@@ -51,8 +42,6 @@ const Hero = () => {
           >
             Odontología de calidad con un equipo comprometido con tu salud y bienestar.
           </p>
-
-          {/* CTA buttons */}
           <div className="flex flex-wrap gap-3">
             <a href="#contactForm" className="btn-primary">
               Pide tu cita
@@ -61,8 +50,6 @@ const Hero = () => {
               Ver especialidades
             </a>
           </div>
-
-          {/* Trust bar */}
           <div
             className="flex flex-wrap gap-6 mt-12 pt-8"
             style={{ borderTop: '1px solid var(--dental-bone)' }}

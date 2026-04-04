@@ -8,9 +8,10 @@ const AboutUs = () => {
         <div className="relative order-2 lg:order-1">
           <img
             src={ourTeam}
-            alt="Nuestro equipo de odontólogos"
+            alt="Nuestro equipo"
+            width={600}
+            height={450}
             className="w-full object-cover rounded-2xl"
-            style={{ aspectRatio: '4/3', boxShadow: '0 20px 60px rgba(44,44,42,0.1)' }}
           />
           <div
             className="absolute -bottom-6 -right-4 lg:-right-8 rounded-2xl px-6 py-4 shadow-lg"

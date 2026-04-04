@@ -50,14 +50,12 @@ const ContactForm = () => {
             <em style={{ color: 'var(--dental-sage-dark)', fontStyle: 'italic' }}>Buenos Aires</em>
           </h2>
         </div>
-
         <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Contact info */}
           <div className="flex flex-col gap-8">
             {contactItems.map(({ icon, label, value }) => (
               <div key={label} className="contact-item">
                 <div className="contact-icon-wrap">
-                  <img src={icon} alt={label} style={{ width: 18, height: 18, objectFit: 'contain' }} />
+                  <img src={icon} alt={label} loading="lazy" style={{ width: 18, height: 18 }} />
                 </div>
                 <div>
                   <p
@@ -79,14 +77,13 @@ const ContactForm = () => {
               </div>
             ))}
           </div>
-
-          {/* Map */}
           <div style={{ borderRadius: '20px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(44,44,42,0.1)' }}>
             <img
               src={map}
               alt="Ubicación en Google Maps"
+              width={600}
+              height={450}
               className="w-full object-cover"
-              style={{ aspectRatio: '4/3', display: 'block' }}
             />
           </div>
         </div>

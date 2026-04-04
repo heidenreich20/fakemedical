@@ -8,7 +8,7 @@ const Card = ({ title, text, icon }: CardProps) => {
   
   return (
     <div className="specialty-card">
-      <img src={icon} alt={title} className="card-icon" />
+      <img src={icon} alt={title} className="card-icon" loading="lazy" />
       <h3
         className="font-display"
         style={{ 

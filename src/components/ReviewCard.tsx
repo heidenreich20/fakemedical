@@ -36,18 +36,20 @@ const ReviewCard = ({ score, profile, review, name }: ReviewCardProps) => {
         {review}
       </blockquote>
 
-      <div style={{ 
-        display: 'flex', 
-        alignItems: 'center', 
-        gap: '12px', 
-        paddingTop: '1rem', 
-        borderTop: '1px solid var(--dental-bone)' 
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '12px',
+        paddingTop: '1rem',
+        borderTop: '1px solid var(--dental-bone)'
       }}>
         <img
           src={profile}
           alt={name}
+          width={40}
+          height={40}
           loading="lazy"
-          style={{ width: 40, height: 40, borderRadius: '50%', objectFit: 'cover', flexShrink: 0 }}
+          style={{ width: 40, height: 40, borderRadius: '50%', objectFit: 'cover' }}
         />
         <div>
           <p style={{ fontSize: '0.875rem', fontWeight: 500, color: 'var(--dental-charcoal)', margin: 0 }}>
