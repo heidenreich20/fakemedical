@@ -4,13 +4,12 @@ const Contact = () => {
   return (
     <section
       id="contactForm"
-      className="py-24 px-6 text-center"
-      style={{ background: 'var(--dental-charcoal)' }}
+      className="py-24 px-6 text-center bg-dental-warm-gray"
     >
       <div className="max-w-2xl mx-auto">
         <div
-          className="section-pill mb-8 inline-flex"
-          style={{ borderColor: 'rgba(255,255,255,0.2)', color: 'rgba(255,255,255,0.7)' }}
+          className="section-pill mb-8 inline-flex text-neuutral-800"
+          style={{ borderColor: 'rgba(255,255,255,0.2)'}}
         >
           Tu sonrisa nos importa
         </div>

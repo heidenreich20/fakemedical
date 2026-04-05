@@ -4,26 +4,10 @@ import time from '../assets/time.webp'
 import mail from '../assets/mail.webp'
 
 const contactItems = [
-  {
-    icon: location,
-    label: 'Dirección',
-    value: 'Avenida Siempreviva 742, Buenos Aires',
-  },
-  {
-    icon: phone,
-    label: 'Teléfono',
-    value: '+54 (011) 111-222-333 · WhatsApp +54 1234-1234',
-  },
-  {
-    icon: time,
-    label: 'Horarios',
-    value: 'Lunes a viernes, 9:00 – 19:00 hs.',
-  },
-  {
-    icon: mail,
-    label: 'Email',
-    value: 'VerityDental@gmail.com',
-  },
+  { icon: location, label: 'Dirección', value: 'Avenida Siempreviva 742, Buenos Aires' },
+  { icon: phone, label: 'Teléfono', value: '+54 (011) 111-222-333 · WhatsApp +54 1234-1234' },
+  { icon: time, label: 'Horarios', value: 'Lunes a viernes, 9:00 – 19:00 hs.' },
+  { icon: mail, label: 'Email', value: 'contact@veritydental.com.ar' },
 ]
 
 const ContactForm = () => {
@@ -31,10 +15,9 @@ const ContactForm = () => {
     <section
       id="contactInfo"
       className="py-24 px-6 lg:px-20 xl:px-32"
-      style={{ background: 'var(--dental-bone)' }}
+      style={{ background: 'var(--color-dental-bone)' }}
     >
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-16">
           <div className="section-pill mb-6 inline-flex">Contacto</div>
           <h2
@@ -42,49 +25,44 @@ const ContactForm = () => {
             style={{
               fontSize: 'clamp(2rem, 4vw, 2.75rem)',
               fontWeight: 300,
-              color: 'var(--dental-charcoal)',
+              color: 'var(--color-dental-charcoal)',
             }}
           >
             Encontranos en{' '}
-            <em style={{ color: 'var(--dental-sage-dark)', fontStyle: 'italic' }}>Buenos Aires</em>
+            <em style={{ color: 'var(--color-dental-sage-dark)', fontStyle: 'italic' }}>Buenos Aires</em>
           </h2>
         </div>
+
         <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Contact info */}
           <div className="flex flex-col gap-8">
             {contactItems.map(({ icon, label, value }) => (
               <div key={label} className="contact-item">
                 <div className="contact-icon-wrap">
-                  <img src={icon} alt={label} loading="lazy" style={{ width: 18, height: 18 }} />
+                  <img src={icon} alt={label} loading="lazy" decoding="async" width={18} height={18} />
                 </div>
                 <div>
-                  <p
-                    style={{
-                      fontSize: '0.7rem',
-                      fontWeight: 500,
-                      letterSpacing: '0.1em',
-                      textTransform: 'uppercase',
-                      color: 'var(--dental-warm-gray)',
-                      marginBottom: '2px',
-                    }}
-                  >
+                  <p className="text-[0.7rem] font-medium tracking-widest uppercase mb-0.5" style={{ color: 'var(--color-dental-warm-gray)' }}>
                     {label}
                   </p>
-                  <p style={{ fontSize: '0.9rem', color: 'var(--dental-charcoal)', lineHeight: 1.5 }}>
+                  <p className="text-sm/relaxed" style={{ color: 'var(--color-dental-charcoal)' }}>
                     {value}
                   </p>
                 </div>
               </div>
             ))}
           </div>
-          <div style={{ borderRadius: '20px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(44,44,42,0.1)' }}>
+
+          {/* Google Maps iframe — no heavy image needed */}
+          <div className="overflow-hidden rounded-[20px]" style={{ boxShadow: '0 8px 32px rgba(44,44,42,0.1)' }}>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.016849939856!2d-58.38375938477024!3d-34.60373888045943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM2JzEzLjUiUyA1OMKwMjInNTMuNiJX!5e0!3m2!1ses!2sar!4v1234567890"
-              width="100%"
-              style={{ aspectRatio: '4/3', border: 0, borderRadius: '20px', display: 'block' }}
-              allowFullScreen
+              title="Ubicación Verity Dental"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Ubicación Verity Dental"
+              allowFullScreen
+              className="w-full border-0 block"
+              style={{ aspectRatio: '4/3' }}
             />
           </div>
         </div>

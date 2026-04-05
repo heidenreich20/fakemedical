@@ -1,42 +1,41 @@
 import { useState, useEffect } from 'react'
 import Logo from '../assets/logo.avif'
 
+const navLinks = [
+  { href: '#aboutUs', label: 'Quiénes somos' },
+  { href: '#specialties', label: 'Especialidades' },
+  { href: '#testimonials', label: 'Testimonios' },
+  { href: '#contactInfo', label: 'Contacto' },
+]
+
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', onScroll)
+    window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  const navLinks = [
-    { href: '#aboutUs', label: 'Quiénes somos' },
-    { href: '#specialties', label: 'Especialidades' },
-    { href: '#testimonials', label: 'Testimonios' },
-    { href: '#contactInfo', label: 'Contacto' },
-  ]
-
   return (
     <nav
-      className="sticky top-0 z-50 transition-all duration-300"
-      style={{
-        backgroundColor: scrolled ? 'rgba(248,245,240,0.97)' : 'rgba(248,245,240,0.95)',
-        borderBottom: `1px solid ${scrolled ? 'var(--dental-bone)' : 'transparent'}`,
-        boxShadow: scrolled ? '0 2px 20px rgba(44,44,42,0.06)' : 'none',
-        backdropFilter: 'blur(12px)',
-      }}
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? 'shadow-[0_2px_20px_rgba(44,44,42,0.06)] border-b border-dental-bone'
+          : 'border-b border-transparent'
+      }`}
+      style={{ backgroundColor: 'rgba(248,245,240,0.97)', backdropFilter: 'blur(12px)' }}
     >
       <div className="flex items-center justify-between px-6 lg:px-12 xl:px-20 h-20 max-w-7xl mx-auto">
         {/* Logo */}
-        <a href="/" aria-label="Inicio" className="flex items-center gap-3 focus-visible:outline-none">
-          <img src={Logo} alt="Verity Dental logo" className="w-9 h-9 object-contain" />
+        <a href="/" aria-label="Inicio" className="flex items-center gap-3">
+          <img src={Logo} alt="Verity Dental logo" width={36} height={36} className="w-9 h-9 object-contain" />
           <div className="flex flex-col leading-tight">
-            <span className="font-display text-lg font-semibold" style={{ color: 'var(--dental-charcoal)', letterSpacing: '0.02em' }}>
+            <span className="font-display text-lg font-semibold tracking-wide" style={{ color: 'var(--color-dental-charcoal)' }}>
               Verity Dental
             </span>
-            <span className="text-xs font-light" style={{ color: 'var(--dental-warm-gray)', letterSpacing: '0.06em' }}>
+            <span className="text-xs font-light tracking-widest" style={{ color: 'var(--color-dental-warm-gray)' }}>
               Cuidado profesional
             </span>
           </div>
@@ -52,66 +51,48 @@ const Nav = () => {
         </ul>
 
         {/* CTA */}
-        <a
-          href="#contactForm"
-          className="hidden md:block btn-primary text-sm"
-          style={{ padding: '0.65rem 1.5rem' }}
-        >
+        <a href="#contactForm" className="btn-primary hidden md:block" style={{ padding: '0.65rem 1.5rem' }}>
           Pide tu cita
         </a>
 
         {/* Burger */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2 focus-visible:outline-none"
+          className="md:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Menú"
+          aria-expanded={isMenuOpen}
         >
-          <span
-            className="block w-6 h-0.5 transition-all duration-300 origin-center"
-            style={{
-              backgroundColor: 'var(--dental-charcoal)',
-              transform: isMenuOpen ? 'rotate(45deg) translate(3px, 3px)' : 'none',
-            }}
-          />
-          <span
-            className="block w-6 h-0.5 transition-all duration-300"
-            style={{
-              backgroundColor: 'var(--dental-charcoal)',
-              opacity: isMenuOpen ? 0 : 1,
-            }}
-          />
-          <span
-            className="block w-6 h-0.5 transition-all duration-300 origin-center"
-            style={{
-              backgroundColor: 'var(--dental-charcoal)',
-              transform: isMenuOpen ? 'rotate(-45deg) translate(3px, -3px)' : 'none',
-            }}
-          />
+          {[0, 1, 2].map((i) => (
+            <span
+              key={i}
+              className="block w-6 h-px transition-all duration-300 origin-center"
+              style={{
+                backgroundColor: 'var(--color-dental-charcoal)',
+                transform: i === 0 && isMenuOpen ? 'rotate(45deg) translate(3px, 3px)'
+                  : i === 2 && isMenuOpen ? 'rotate(-45deg) translate(3px, -3px)'
+                  : 'none',
+                opacity: i === 1 && isMenuOpen ? 0 : 1,
+              }}
+            />
+          ))}
         </button>
       </div>
 
       {/* Mobile menu */}
       <div className={`mobile-menu ${isMenuOpen ? 'open' : 'closed'}`}>
-        <div
-          className="px-6 pb-5 flex flex-col gap-1"
-          style={{ borderTop: '1px solid var(--dental-bone)' }}
-        >
+        <div className="px-6 pb-5 flex flex-col gap-1 border-t border-dental-bone">
           {navLinks.map(({ href, label }) => (
             <a
               key={href}
               href={href}
-              className="py-3 text-sm font-light"
-              style={{ color: 'var(--dental-warm-gray)', borderBottom: '1px solid var(--dental-bone)' }}
+              className="py-3 text-sm font-light border-b border-dental-bone"
+              style={{ color: 'var(--color-dental-warm-gray)' }}
               onClick={() => setIsMenuOpen(false)}
             >
               {label}
             </a>
           ))}
-          <a
-            href="#contactForm"
-            className="btn-primary text-center mt-3"
-            onClick={() => setIsMenuOpen(false)}
-          >
+          <a href="#contactForm" className="btn-primary text-center mt-3" onClick={() => setIsMenuOpen(false)}>
             Pide tu cita
           </a>
         </div>

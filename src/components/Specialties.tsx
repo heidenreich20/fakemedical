@@ -27,7 +27,6 @@ const Specialties = () => {
       style={{ background: 'var(--dental-bone)' }}
     >
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-16">
           <div className="section-pill mb-6 inline-flex">Especialidades y tratamientos</div>
           <h2
@@ -43,8 +42,6 @@ const Specialties = () => {
             <em style={{ color: 'var(--dental-sage-dark)', fontStyle: 'italic' }}>necesita</em>
           </h2>
         </div>
-
-        {/* Grid */}
         <div
           style={{
             display: 'grid',

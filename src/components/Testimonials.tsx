@@ -35,7 +35,6 @@ const Testimonials = () => {
   return (
     <section id="testimonials" className="py-24 px-6 lg:px-20 xl:px-32">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
         <div className="text-center mb-16">
           <div className="section-pill mb-6 inline-flex">Testimonios</div>
           <h2
@@ -51,8 +50,6 @@ const Testimonials = () => {
             <em style={{ color: 'var(--dental-sage-dark)', fontStyle: 'italic' }}>nuestros pacientes</em>
           </h2>
         </div>
-
-        {/* Grid */}
         <div
           style={{
             display: 'grid',

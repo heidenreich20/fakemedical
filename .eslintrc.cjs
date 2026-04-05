@@ -15,6 +15,7 @@ module.exports = {
   plugins: ['react-refresh', '@typescript-eslint'],
   rules: {
     'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-    'react/prop-types': 'off', // TypeScript handles this
+    'react/prop-types': 'off', 
+    'react/no-unknown-property': ['error', { ignore: ['fetchPriority'] }],
   },
 }
