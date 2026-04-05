@@ -5,20 +5,20 @@ const Hero = () => {
   return (
     <section className="relative overflow-hidden" style={{ minHeight: 'calc(100vh - 5rem)' }}>
       <picture>
-        <source 
-          media="(max-width: 768px)" 
-          srcSet={smileMobile} 
-          type="image/avif" 
+        <source
+          media="(max-width: 768px)"
+          srcSet={smileMobile}
+          type="image/avif"
         />
         <img
           src={smileDesktop}
-          alt="Paciente sonriendo en Sapphire Bistro"
+          alt="Paciente sonriendo"
+          fetchPriority="high"
+          loading="eager"
           decoding="async"
           width={1920}
           height={1080}
-          fetchPriority='high'
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ objectPosition: '65% center' }}
+          className="absolute inset-0 w-full h-full object-cover object-[center_center] md:object-[65%_center]"
         />
       </picture>
       <div className="hero-overlay absolute inset-0" />

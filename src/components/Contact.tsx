@@ -8,7 +8,7 @@ const Contact = () => {
     >
       <div className="max-w-2xl mx-auto">
         <div
-          className="section-pill mb-8 inline-flex text-neuutral-800"
+          className="section-pill mb-8 inline-flex text-neutral-800 font-bold"
           style={{ borderColor: 'rgba(255,255,255,0.2)'}}
         >
           Tu sonrisa nos importa
@@ -28,8 +28,8 @@ const Contact = () => {
         </h2>
 
         <p
+          className='text-dental-cream'
           style={{
-            color: 'rgba(255,255,255,0.55)',
             fontSize: '1rem',
             lineHeight: 1.7,
             marginBottom: '2.5rem',
