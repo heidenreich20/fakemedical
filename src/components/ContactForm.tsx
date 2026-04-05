@@ -2,7 +2,6 @@ import location from '../assets/location.png'
 import phone from '../assets/phone.png'
 import time from '../assets/time.png'
 import mail from '../assets/mail.png'
-import map from '../assets/map.png'
 
 const contactItems = [
   {
@@ -78,12 +77,14 @@ const ContactForm = () => {
             ))}
           </div>
           <div style={{ borderRadius: '20px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(44,44,42,0.1)' }}>
-            <img
-              src={map}
-              alt="Ubicación en Google Maps"
-              width={600}
-              height={450}
-              className="w-full object-cover"
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.016849939856!2d-58.38375938477024!3d-34.60373888045943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDM2JzEzLjUiUyA1OMKwMjInNTMuNiJX!5e0!3m2!1ses!2sar!4v1234567890"
+              width="100%"
+              style={{ aspectRatio: '4/3', border: 0, borderRadius: '20px', display: 'block' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Ubicación Verity Dental"
             />
           </div>
         </div>

@@ -1,24 +1,27 @@
-import ourTeam from '../assets/ourteam.webp'
+import ourTeam from '../assets/ourteam.avif'
 
 const AboutUs = () => {
   return (
     <section id="aboutUs" className="py-24 px-6 lg:px-20 xl:px-32 max-w-7xl mx-auto">
       <div className="grid lg:grid-cols-2 gap-16 items-center">
-        {/* Image */}
         <div className="relative order-2 lg:order-1">
           <img
             src={ourTeam}
-            alt="Nuestro equipo"
+            alt="Nuestro equipo de odontólogos"
             width={600}
             height={450}
             className="w-full object-cover rounded-2xl"
+            style={{ aspectRatio: '4/3', boxShadow: '0 20px 60px rgba(44,44,42,0.1)' }}
+            loading="lazy"
           />
           <div
             className="absolute -bottom-6 -right-4 lg:-right-8 rounded-2xl px-6 py-4 shadow-lg"
             style={{ background: 'var(--dental-sage-dark)' }}
           >
             <p className="font-display text-3xl font-semibold text-white leading-none">10+</p>
-            <p className="text-xs font-light text-white/80 mt-1 whitespace-nowrap">Años de experiencia</p>
+            <p style={{ fontSize: '0.75rem', color: 'white', marginTop: '2px', opacity: 0.95, whiteSpace: 'nowrap' }}>
+              Años de experiencia
+            </p>
           </div>
         </div>
         <div className="order-1 lg:order-2">
