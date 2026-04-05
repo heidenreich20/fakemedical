@@ -1,7 +1,7 @@
-import location from '../assets/location.png'
-import phone from '../assets/phone.png'
-import time from '../assets/time.png'
-import mail from '../assets/mail.png'
+import location from '../assets/location.webp'
+import phone from '../assets/phone.webp'
+import time from '../assets/time.webp'
+import mail from '../assets/mail.webp'
 
 const contactItems = [
   {
